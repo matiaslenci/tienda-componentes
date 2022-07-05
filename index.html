@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Tienda oneClick</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- NAV BAR -->
+      <nav class="navbar bg">
+        <div class="container">
+          <div>
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="./img/png_logo_oneclick-removebg.png"
+                alt=""
+                class="logo"
+              />
+            </a>
+          </div>
+          <div>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar por nombre"
+                aria-label="Search"
+                id="buscadorProductos"
+              />
+              <button
+                class="btn btn--navbar btn-outline-success me-2"
+                type="submit"
+                id="buscar"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main
+      class="main container d-flex justify-content-center align-items-center flex-column"
+    >
+      <!-- ASIDE -->
+      <div class="row">
+        <aside class="col-2 aside--main card--aside">
+          <div>
+            <h3>Categorias</h3>
+          </div>
+          <div>
+            <h4>Procesadores</h4>
+            <label
+              ><input type="checkbox" id="checkProIntel" value="" />
+              Procesadores Intel</label
+            >
+
+            <label
+              ><input type="checkbox" id="checkProAmd" value="" /> Procesadores
+              AMD</label
+            >
+          </div>
+          <div>
+            <h4>Memorias Ram</h4>
+            <label><input type="checkbox" id="" value="" /> Memorias</label>
+
+            <label
+              ><input type="checkbox" id="" value="" /> Memorias sodimm</label
+            >
+          </div>
+          <div>
+            <h4>Mother</h4>
+            <label><input type="checkbox" id="" value="" /> Mother Intel</label>
+
+            <label><input type="checkbox" id="" value="" /> Mother AMD</label>
+          </div>
+          <div>
+            <h4>Placas de video</h4>
+            <label
+              ><input type="checkbox" id="" value="" /> Placas de video
+              GeForce</label
+            >
+
+            <label
+              ><input type="checkbox" id="" value="" /> Placas de video
+              AMD</label
+            >
+          </div>
+        </aside>
+        <section class="col section--main">
+          <!-- BARRA CON MENU DESPLEGABLE -->
+<!--           <article>
+            <select name="menu desplegable">
+              <option value="Ordenar por">Ordenar por</option>
+              <option value="Mayor precio">Mayor precio</option>
+              <option value="Menor precio">Menor precio</option>
+              <option value="A-Z">A-Z</option>
+            </select>
+            <p>Mostrando X productos</p>
+          </article>
+ -->
+          <!-- CATALOGO -->
+          <div>
+            <ul
+              id="listaBuscador"
+              class="row list-group list-group-horizontal"
+            ></ul>
+          </div>
+          <div>
+            <ul id="miLista" class="row list-group list-group-horizontal">
+              <!--productos -->
+            </ul>
+            <p></p>
+          </div>
+          <div>
+            <h4>Tu carrito:</h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody id="tablabody">
+                <!-- tabla carrito -->
+              </tbody>
+            </table>
+            <button id="finalizar" class="btn btn-success">
+              Finalizar compra
+            </button>
+          </div>
+        </section>
+        <div id="carrito"></div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="d-flex justify-content-center elemento--footer">
+        <img
+          class="header--footer logo"
+          src="./img/png_logo_oneclick-removebg.png"
+          alt="logo de oneClick"
+        />
+      </div>
+      <div class="d-flex justify-content-center elemento--footer">
+        <img src="./img/bxl-whatsapp.png" alt="whatsapp" />
+        <img src="./img/bxl-facebook-circle.png" alt="facebook" />
+        <img src="./img/bxl-instagram.png" alt="instagram" />
+      </div>
+      <div class="d-flex justify-content-center elemento--footer">
+        <p>Copyright © 2022 Tienda oneClick</p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+
+    <!-- -------LIBRERIAS----- -->
+
+    <!-- BT -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
